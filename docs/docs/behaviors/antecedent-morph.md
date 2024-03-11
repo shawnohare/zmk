@@ -58,7 +58,7 @@ The antecedent-morph behavior can issue not only key press events, but rather ar
 
 Some special key codes can be obtained only with the help of modifiers. For example, on the U.S. International Keyboard,
 the symbol Ü is obtained by holding right Alt and tapping Y. In order to issue this symbol, one can therefore use `&kp
-RA(Y)`. Here, right Alt is called an *implicit modifier*. Antecedents are always considered with implicit modifiers. For
+RA(Y)`. Here, right Alt is called an _implicit modifier_. Antecedents are always considered with implicit modifiers. For
 example,
 
 ```dts
@@ -81,7 +81,7 @@ replaces the A by a U if preceded by Ü, but not if preceded by Y.
 
 ### Explicit Modifiers
 
-The entire function of the antecedent-morph behavior is independent of the *explicit modifiers*. These are the modifiers
+The entire function of the antecedent-morph behavior is independent of the _explicit modifiers_. These are the modifiers
 that the user is holding down while tapping the antecedent or while pressing the antecedent-morph behavior. In the above
 example, A is replaced by O if preceded by Z, regardless of which modifier keys were held down while tapping the Z,
 i.e. in particular after a lower case z or after an upper case Z.
@@ -93,7 +93,7 @@ behavior, then this results in an upper case O rather than a lower case o.
 
 If some binding somewhere issues an illegal key code in the range beyond 0x00ff, this illegal key code is recognized and
 tested as an antecedent, but then immediately discarded from the event queue. It therefore functions similarly to a dead
-key. Note that these illegal key codes are specified with the *usage page* 0x07 as in the following example. If some key
+key. Note that these illegal key codes are specified with the _usage page_ 0x07 as in the following example. If some key
 is bound to `&kp DEAD_ANTE`, then it does not print anything, but still turns a subsequent A into a U.
 
 ```dts
